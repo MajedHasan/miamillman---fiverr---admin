@@ -1,10 +1,13 @@
 const authProvider = {
   login: async ({ username, password }) => {
-    const response = await fetch("http://localhost:5001/api/auth/login", {
-      method: "POST",
-      body: JSON.stringify({ email: username, password }),
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = await fetch(
+      "https://api.madconsolution.xyz/api/auth/login",
+      {
+        method: "POST",
+        body: JSON.stringify({ email: username, password }),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
 
     const json = await response.json();
     if (!response.ok || !json.jwt) {
