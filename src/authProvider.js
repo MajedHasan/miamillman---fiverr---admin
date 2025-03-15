@@ -1,6 +1,6 @@
 const authProvider = {
   login: async ({ username, password }) => {
-    const response = await fetch("http://api.syriasouq.com//api/auth/login", {
+    const response = await fetch("http://api.syriasouq.com/api/auth/login", {
       method: "POST",
       body: JSON.stringify({ email: username, password }),
       headers: { "Content-Type": "application/json" },
