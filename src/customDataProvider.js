@@ -1,6 +1,6 @@
 import simpleRestProvider from "ra-data-simple-rest";
 
-const apiUrl = "https://api.madconsolution.xyz/api";
+const apiUrl = "http://api.syriasouq.com//api";
 
 // ✅ Function to get token from localStorage
 const getToken = () => {
@@ -42,7 +42,7 @@ const customDataProvider = {
         id: item._id,
         ...item,
         imageURL: item.images?.length
-          ? `https://api.madconsolution.xyz/uploads/cars/${item.images[0]}`
+          ? `http://api.syriasouq.com//uploads/cars/${item.images[0]}`
           : null,
       })),
       total: json.data.length,
