@@ -1,5 +1,6 @@
 const authProvider = {
   login: async ({ username, password }) => {
+    // const response = await fetch("http://localhost:5001/api/auth/login", {
     const response = await fetch("http://api.syriasouq.com/api/auth/login", {
       method: "POST",
       body: JSON.stringify({ email: username, password }),
@@ -25,7 +26,11 @@ const authProvider = {
 
   checkAuth: () => {
     const auth = JSON.parse(localStorage.getItem("SyriaSouq-auth"));
-    return auth ? Promise.resolve() : Promise.reject();
+    if (auth && auth.user.role === "admin") {
+      return Promise.resolve();
+    } else {
+      return Promise.reject(); // Reject if the user is not an admin
+    }
   },
 
   checkError: (error) => {
