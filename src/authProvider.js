@@ -3,7 +3,7 @@ const authProvider = {
     // const response = await fetch("http://localhost:5001/api/auth/login", {
     const response = await fetch("http://api.syriasouq.com/api/auth/login", {
       method: "POST",
-      body: JSON.stringify({ email: username, password }),
+      body: JSON.stringify({ phone: username, password }),
       headers: { "Content-Type": "application/json" },
     });
 
