@@ -1,7 +1,7 @@
 import simpleRestProvider from "ra-data-simple-rest";
 
 // const apiUrl = "http://localhost:5001/api";
-const apiUrl = "http://api.syriasouq.com/api";
+const apiUrl = "https://api.syriasouq.com/api";
 
 // ✅ Function to get token from localStorage
 const getToken = () => {
